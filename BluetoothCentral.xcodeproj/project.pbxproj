@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2102AD0203CA10100E5F97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102ACF203CA10100E5F97B /* AppDelegate.swift */; };
+		A2102AD2203CA10100E5F97B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102AD1203CA10100E5F97B /* ViewController.swift */; };
+		A2102AD5203CA10100E5F97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2102AD3203CA10100E5F97B /* Main.storyboard */; };
+		A2102AD7203CA10100E5F97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2102AD6203CA10100E5F97B /* Assets.xcassets */; };
+		A2102ADA203CA10100E5F97B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2102AD8203CA10100E5F97B /* LaunchScreen.storyboard */; };
+		A2102AE5203CA10100E5F97B /* BluetoothCentralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102AE4203CA10100E5F97B /* BluetoothCentralTests.swift */; };
+		A2102AF0203CA10100E5F97B /* BluetoothCentralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102AEF203CA10100E5F97B /* BluetoothCentralUITests.swift */; };
+		A2102AF5203CA10200E5F97B /* BluetoothCentral WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A2102AF4203CA10200E5F97B /* BluetoothCentral WatchKit App.app */; };
+		A2102AFB203CA10200E5F97B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2102AF9203CA10200E5F97B /* Interface.storyboard */; };
+		A2102AFD203CA10200E5F97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2102AFC203CA10200E5F97B /* Assets.xcassets */; };
+		A2102B04203CA10200E5F97B /* BluetoothCentral WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A2102B03203CA10200E5F97B /* BluetoothCentral WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A2102B09203CA10200E5F97B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102B08203CA10200E5F97B /* InterfaceController.swift */; };
+		A2102B0B203CA10200E5F97B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102B0A203CA10200E5F97B /* ExtensionDelegate.swift */; };
+		A2102B0D203CA10200E5F97B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102B0C203CA10200E5F97B /* NotificationController.swift */; };
+		A2102B0F203CA10200E5F97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2102B0E203CA10200E5F97B /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2102AE1203CA10100E5F97B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2102AC4203CA10100E5F97B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2102ACB203CA10100E5F97B;
+			remoteInfo = BluetoothCentral;
+		};
+		A2102AEC203CA10100E5F97B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2102AC4203CA10100E5F97B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2102ACB203CA10100E5F97B;
+			remoteInfo = BluetoothCentral;
+		};
+		A2102AF6203CA10200E5F97B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2102AC4203CA10100E5F97B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2102AF3203CA10200E5F97B;
+			remoteInfo = "BluetoothCentral WatchKit App";
+		};
+		A2102B05203CA10200E5F97B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2102AC4203CA10100E5F97B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2102B02203CA10200E5F97B;
+			remoteInfo = "BluetoothCentral WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2102B17203CA10200E5F97B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A2102B04203CA10200E5F97B /* BluetoothCentral WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102B1B203CA10200E5F97B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A2102AF5203CA10200E5F97B /* BluetoothCentral WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A2102ACC203CA10100E5F97B /* BluetoothCentral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothCentral.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2102ACF203CA10100E5F97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2102AD1203CA10100E5F97B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A2102AD4203CA10100E5F97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2102AD6203CA10100E5F97B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2102AD9203CA10100E5F97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2102ADB203CA10100E5F97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2102AE0203CA10100E5F97B /* BluetoothCentralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothCentralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2102AE4203CA10100E5F97B /* BluetoothCentralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralTests.swift; sourceTree = "<group>"; };
+		A2102AE6203CA10100E5F97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2102AEB203CA10100E5F97B /* BluetoothCentralUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothCentralUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2102AEF203CA10100E5F97B /* BluetoothCentralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralUITests.swift; sourceTree = "<group>"; };
+		A2102AF1203CA10100E5F97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2102AF4203CA10200E5F97B /* BluetoothCentral WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BluetoothCentral WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2102AFA203CA10200E5F97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A2102AFC203CA10200E5F97B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2102AFE203CA10200E5F97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2102B03203CA10200E5F97B /* BluetoothCentral WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BluetoothCentral WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2102B08203CA10200E5F97B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A2102B0A203CA10200E5F97B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A2102B0C203CA10200E5F97B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A2102B0E203CA10200E5F97B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2102B10203CA10200E5F97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2102B11203CA10200E5F97B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2102AC9203CA10100E5F97B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102ADD203CA10100E5F97B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102AE8203CA10100E5F97B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102B00203CA10200E5F97B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2102AC3203CA10100E5F97B = {
+			isa = PBXGroup;
+			children = (
+				A2102ACE203CA10100E5F97B /* BluetoothCentral */,
+				A2102AE3203CA10100E5F97B /* BluetoothCentralTests */,
+				A2102AEE203CA10100E5F97B /* BluetoothCentralUITests */,
+				A2102AF8203CA10200E5F97B /* BluetoothCentral WatchKit App */,
+				A2102B07203CA10200E5F97B /* BluetoothCentral WatchKit Extension */,
+				A2102ACD203CA10100E5F97B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2102ACD203CA10100E5F97B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2102ACC203CA10100E5F97B /* BluetoothCentral.app */,
+				A2102AE0203CA10100E5F97B /* BluetoothCentralTests.xctest */,
+				A2102AEB203CA10100E5F97B /* BluetoothCentralUITests.xctest */,
+				A2102AF4203CA10200E5F97B /* BluetoothCentral WatchKit App.app */,
+				A2102B03203CA10200E5F97B /* BluetoothCentral WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2102ACE203CA10100E5F97B /* BluetoothCentral */ = {
+			isa = PBXGroup;
+			children = (
+				A2102ACF203CA10100E5F97B /* AppDelegate.swift */,
+				A2102AD1203CA10100E5F97B /* ViewController.swift */,
+				A2102AD3203CA10100E5F97B /* Main.storyboard */,
+				A2102AD6203CA10100E5F97B /* Assets.xcassets */,
+				A2102AD8203CA10100E5F97B /* LaunchScreen.storyboard */,
+				A2102ADB203CA10100E5F97B /* Info.plist */,
+			);
+			path = BluetoothCentral;
+			sourceTree = "<group>";
+		};
+		A2102AE3203CA10100E5F97B /* BluetoothCentralTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2102AE4203CA10100E5F97B /* BluetoothCentralTests.swift */,
+				A2102AE6203CA10100E5F97B /* Info.plist */,
+			);
+			path = BluetoothCentralTests;
+			sourceTree = "<group>";
+		};
+		A2102AEE203CA10100E5F97B /* BluetoothCentralUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2102AEF203CA10100E5F97B /* BluetoothCentralUITests.swift */,
+				A2102AF1203CA10100E5F97B /* Info.plist */,
+			);
+			path = BluetoothCentralUITests;
+			sourceTree = "<group>";
+		};
+		A2102AF8203CA10200E5F97B /* BluetoothCentral WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				A2102AF9203CA10200E5F97B /* Interface.storyboard */,
+				A2102AFC203CA10200E5F97B /* Assets.xcassets */,
+				A2102AFE203CA10200E5F97B /* Info.plist */,
+			);
+			path = "BluetoothCentral WatchKit App";
+			sourceTree = "<group>";
+		};
+		A2102B07203CA10200E5F97B /* BluetoothCentral WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A2102B08203CA10200E5F97B /* InterfaceController.swift */,
+				A2102B0A203CA10200E5F97B /* ExtensionDelegate.swift */,
+				A2102B0C203CA10200E5F97B /* NotificationController.swift */,
+				A2102B0E203CA10200E5F97B /* Assets.xcassets */,
+				A2102B10203CA10200E5F97B /* Info.plist */,
+				A2102B11203CA10200E5F97B /* PushNotificationPayload.apns */,
+			);
+			path = "BluetoothCentral WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2102ACB203CA10100E5F97B /* BluetoothCentral */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2102B1C203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentral" */;
+			buildPhases = (
+				A2102AC8203CA10100E5F97B /* Sources */,
+				A2102AC9203CA10100E5F97B /* Frameworks */,
+				A2102ACA203CA10100E5F97B /* Resources */,
+				A2102B1B203CA10200E5F97B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2102AF7203CA10200E5F97B /* PBXTargetDependency */,
+			);
+			name = BluetoothCentral;
+			productName = BluetoothCentral;
+			productReference = A2102ACC203CA10100E5F97B /* BluetoothCentral.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2102ADF203CA10100E5F97B /* BluetoothCentralTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2102B1F203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentralTests" */;
+			buildPhases = (
+				A2102ADC203CA10100E5F97B /* Sources */,
+				A2102ADD203CA10100E5F97B /* Frameworks */,
+				A2102ADE203CA10100E5F97B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2102AE2203CA10100E5F97B /* PBXTargetDependency */,
+			);
+			name = BluetoothCentralTests;
+			productName = BluetoothCentralTests;
+			productReference = A2102AE0203CA10100E5F97B /* BluetoothCentralTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2102AEA203CA10100E5F97B /* BluetoothCentralUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2102B22203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentralUITests" */;
+			buildPhases = (
+				A2102AE7203CA10100E5F97B /* Sources */,
+				A2102AE8203CA10100E5F97B /* Frameworks */,
+				A2102AE9203CA10100E5F97B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2102AED203CA10100E5F97B /* PBXTargetDependency */,
+			);
+			name = BluetoothCentralUITests;
+			productName = BluetoothCentralUITests;
+			productReference = A2102AEB203CA10100E5F97B /* BluetoothCentralUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		A2102AF3203CA10200E5F97B /* BluetoothCentral WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2102B18203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentral WatchKit App" */;
+			buildPhases = (
+				A2102AF2203CA10200E5F97B /* Resources */,
+				A2102B17203CA10200E5F97B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2102B06203CA10200E5F97B /* PBXTargetDependency */,
+			);
+			name = "BluetoothCentral WatchKit App";
+			productName = "BluetoothCentral WatchKit App";
+			productReference = A2102AF4203CA10200E5F97B /* BluetoothCentral WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A2102B02203CA10200E5F97B /* BluetoothCentral WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2102B14203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentral WatchKit Extension" */;
+			buildPhases = (
+				A2102AFF203CA10200E5F97B /* Sources */,
+				A2102B00203CA10200E5F97B /* Frameworks */,
+				A2102B01203CA10200E5F97B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BluetoothCentral WatchKit Extension";
+			productName = "BluetoothCentral WatchKit Extension";
+			productReference = A2102B03203CA10200E5F97B /* BluetoothCentral WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2102AC4203CA10100E5F97B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Nikolay Dakov";
+				TargetAttributes = {
+					A2102ACB203CA10100E5F97B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A2102ADF203CA10100E5F97B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A2102ACB203CA10100E5F97B;
+					};
+					A2102AEA203CA10100E5F97B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A2102ACB203CA10100E5F97B;
+					};
+					A2102AF3203CA10200E5F97B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A2102B02203CA10200E5F97B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A2102AC7203CA10100E5F97B /* Build configuration list for PBXProject "BluetoothCentral" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2102AC3203CA10100E5F97B;
+			productRefGroup = A2102ACD203CA10100E5F97B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2102ACB203CA10100E5F97B /* BluetoothCentral */,
+				A2102ADF203CA10100E5F97B /* BluetoothCentralTests */,
+				A2102AEA203CA10100E5F97B /* BluetoothCentralUITests */,
+				A2102AF3203CA10200E5F97B /* BluetoothCentral WatchKit App */,
+				A2102B02203CA10200E5F97B /* BluetoothCentral WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2102ACA203CA10100E5F97B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2102ADA203CA10100E5F97B /* LaunchScreen.storyboard in Resources */,
+				A2102AD7203CA10100E5F97B /* Assets.xcassets in Resources */,
+				A2102AD5203CA10100E5F97B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102ADE203CA10100E5F97B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102AE9203CA10100E5F97B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102AF2203CA10200E5F97B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2102AFD203CA10200E5F97B /* Assets.xcassets in Resources */,
+				A2102AFB203CA10200E5F97B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102B01203CA10200E5F97B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2102B0F203CA10200E5F97B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2102AC8203CA10100E5F97B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2102AD2203CA10100E5F97B /* ViewController.swift in Sources */,
+				A2102AD0203CA10100E5F97B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102ADC203CA10100E5F97B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2102AE5203CA10100E5F97B /* BluetoothCentralTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102AE7203CA10100E5F97B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2102AF0203CA10100E5F97B /* BluetoothCentralUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2102AFF203CA10200E5F97B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2102B0D203CA10200E5F97B /* NotificationController.swift in Sources */,
+				A2102B0B203CA10200E5F97B /* ExtensionDelegate.swift in Sources */,
+				A2102B09203CA10200E5F97B /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2102AE2203CA10100E5F97B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2102ACB203CA10100E5F97B /* BluetoothCentral */;
+			targetProxy = A2102AE1203CA10100E5F97B /* PBXContainerItemProxy */;
+		};
+		A2102AED203CA10100E5F97B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2102ACB203CA10100E5F97B /* BluetoothCentral */;
+			targetProxy = A2102AEC203CA10100E5F97B /* PBXContainerItemProxy */;
+		};
+		A2102AF7203CA10200E5F97B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2102AF3203CA10200E5F97B /* BluetoothCentral WatchKit App */;
+			targetProxy = A2102AF6203CA10200E5F97B /* PBXContainerItemProxy */;
+		};
+		A2102B06203CA10200E5F97B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2102B02203CA10200E5F97B /* BluetoothCentral WatchKit Extension */;
+			targetProxy = A2102B05203CA10200E5F97B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A2102AD3203CA10100E5F97B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2102AD4203CA10100E5F97B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2102AD8203CA10100E5F97B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2102AD9203CA10100E5F97B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A2102AF9203CA10200E5F97B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2102AFA203CA10200E5F97B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2102B12203CA10200E5F97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2102B13203CA10200E5F97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2102B15203CA10200E5F97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BluetoothCentral WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		A2102B16203CA10200E5F97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BluetoothCentral WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		A2102B19203CA10200E5F97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = BluetoothCentral_WatchKit_Extension;
+				INFOPLIST_FILE = "BluetoothCentral WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		A2102B1A203CA10200E5F97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = BluetoothCentral_WatchKit_Extension;
+				INFOPLIST_FILE = "BluetoothCentral WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		A2102B1D203CA10200E5F97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BluetoothCentral/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2102B1E203CA10200E5F97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BluetoothCentral/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2102B20203CA10200E5F97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BluetoothCentralTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentralTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothCentral.app/BluetoothCentral";
+			};
+			name = Debug;
+		};
+		A2102B21203CA10200E5F97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BluetoothCentralTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentralTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothCentral.app/BluetoothCentral";
+			};
+			name = Release;
+		};
+		A2102B23203CA10200E5F97B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BluetoothCentralUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentralUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BluetoothCentral;
+			};
+			name = Debug;
+		};
+		A2102B24203CA10200E5F97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BluetoothCentralUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentralUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BluetoothCentral;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2102AC7203CA10100E5F97B /* Build configuration list for PBXProject "BluetoothCentral" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2102B12203CA10200E5F97B /* Debug */,
+				A2102B13203CA10200E5F97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2102B14203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentral WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2102B15203CA10200E5F97B /* Debug */,
+				A2102B16203CA10200E5F97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2102B18203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentral WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2102B19203CA10200E5F97B /* Debug */,
+				A2102B1A203CA10200E5F97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2102B1C203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentral" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2102B1D203CA10200E5F97B /* Debug */,
+				A2102B1E203CA10200E5F97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2102B1F203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentralTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2102B20203CA10200E5F97B /* Debug */,
+				A2102B21203CA10200E5F97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2102B22203CA10200E5F97B /* Build configuration list for PBXNativeTarget "BluetoothCentralUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2102B23203CA10200E5F97B /* Debug */,
+				A2102B24203CA10200E5F97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2102AC4203CA10100E5F97B /* Project object */;
+}
