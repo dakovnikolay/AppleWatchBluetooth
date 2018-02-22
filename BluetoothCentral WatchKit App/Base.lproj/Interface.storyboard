@@ -19,9 +19,17 @@
                                 <action selector="button" destination="AgC-eL-Hgc" id="LJI-0j-tPp"/>
                             </connections>
                         </button>
-                        <label width="124" height="104" alignment="center" text="Label" textAlignment="left" id="uIG-yI-vHa"/>
+                        <label width="73" height="26" alignment="left" text="Label" id="4Ke-Sk-cqb"/>
+                        <label width="111" height="28" alignment="center" text="Label" textAlignment="left" id="uIG-yI-vHa"/>
+                        <button width="1" alignment="left" title="Button" id="jMg-Xu-KSP">
+                            <connections>
+                                <action selector="startStopBtnClicked" destination="AgC-eL-Hgc" id="6s2-pj-YZk"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="heartLabel" destination="4Ke-Sk-cqb" id="WVn-b4-amN"/>
+                        <outlet property="startStopButton" destination="jMg-Xu-KSP" id="vTP-Jp-J0R"/>
                         <outlet property="statusLabel" destination="uIG-yI-vHa" id="7Gw-oc-jfS"/>
                     </connections>
                 </controller>

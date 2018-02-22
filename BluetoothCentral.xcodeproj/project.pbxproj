@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A48B42A203E970D0063F5FC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A48B429203E970D0063F5FC /* HealthKit.framework */; };
+		2A48B42E203E97300063F5FC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A48B42D203E97300063F5FC /* HealthKit.framework */; };
 		A2102AD0203CA10100E5F97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102ACF203CA10100E5F97B /* AppDelegate.swift */; };
 		A2102AD2203CA10100E5F97B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102AD1203CA10100E5F97B /* ViewController.swift */; };
 		A2102AD5203CA10100E5F97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2102AD3203CA10100E5F97B /* Main.storyboard */; };
@@ -82,6 +84,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A48B429203E970D0063F5FC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		2A48B42D203E97300063F5FC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		2AB8578C203E8F7400B10FB1 /* BluetoothCentral WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BluetoothCentral WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		2AEA22D0203E732D00A475E0 /* BluetoothCentral.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BluetoothCentral.entitlements; sourceTree = "<group>"; };
 		A2102ACC203CA10100E5F97B /* BluetoothCentral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothCentral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2102ACF203CA10100E5F97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2102AD1203CA10100E5F97B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2102B27203CA14100E5F97B /* CoreBluetooth.framework in Frameworks */,
+				2A48B42A203E970D0063F5FC /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A48B42E203E97300063F5FC /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +178,7 @@
 		A2102ACE203CA10100E5F97B /* BluetoothCentral */ = {
 			isa = PBXGroup;
 			children = (
+				2AEA22D0203E732D00A475E0 /* BluetoothCentral.entitlements */,
 				A2102ACF203CA10100E5F97B /* AppDelegate.swift */,
 				A2102AD1203CA10100E5F97B /* ViewController.swift */,
 				A2102AD3203CA10100E5F97B /* Main.storyboard */,
@@ -211,6 +220,7 @@
 		A2102B07203CA10200E5F97B /* BluetoothCentral WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2AB8578C203E8F7400B10FB1 /* BluetoothCentral WatchKit Extension.entitlements */,
 				A2102B08203CA10200E5F97B /* InterfaceController.swift */,
 				A2102B0A203CA10200E5F97B /* ExtensionDelegate.swift */,
 				A2102B0C203CA10200E5F97B /* NotificationController.swift */,
@@ -224,6 +234,8 @@
 		A2102B25203CA14000E5F97B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A48B42D203E97300063F5FC /* HealthKit.framework */,
+				2A48B429203E970D0063F5FC /* HealthKit.framework */,
 				A2102B26203CA14100E5F97B /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;
@@ -334,6 +346,11 @@
 					A2102ACB203CA10100E5F97B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					A2102ADF203CA10100E5F97B = {
 						CreatedOnToolsVersion = 9.2;
@@ -352,6 +369,14 @@
 					A2102B02203CA10200E5F97B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -558,7 +583,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -609,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -621,7 +646,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "BluetoothCentral WatchKit Extension/BluetoothCentral WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				INFOPLIST_FILE = "BluetoothCentral WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral.watchkitapp.watchkitextension;
@@ -630,7 +657,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Debug;
 		};
@@ -638,7 +665,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "BluetoothCentral WatchKit Extension/BluetoothCentral WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				INFOPLIST_FILE = "BluetoothCentral WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral.watchkitapp.watchkitextension;
@@ -647,7 +676,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Release;
 		};
@@ -657,6 +686,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				IBSC_MODULE = BluetoothCentral_WatchKit_Extension;
 				INFOPLIST_FILE = "BluetoothCentral WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral.watchkitapp;
@@ -665,7 +695,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Debug;
 		};
@@ -675,6 +705,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				IBSC_MODULE = BluetoothCentral_WatchKit_Extension;
 				INFOPLIST_FILE = "BluetoothCentral WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral.watchkitapp;
@@ -683,7 +714,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Release;
 		};
@@ -691,7 +722,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BluetoothCentral/BluetoothCentral.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				INFOPLIST_FILE = BluetoothCentral/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral;
@@ -705,7 +738,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BluetoothCentral/BluetoothCentral.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				INFOPLIST_FILE = BluetoothCentral/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentral;
@@ -721,6 +756,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				INFOPLIST_FILE = BluetoothCentralTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentralTests;
@@ -737,6 +773,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				INFOPLIST_FILE = BluetoothCentralTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentralTests;
@@ -752,6 +789,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				INFOPLIST_FILE = BluetoothCentralUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentralUITests;
@@ -767,6 +805,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LC7NWNYLM;
 				INFOPLIST_FILE = BluetoothCentralUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PEACH.BluetoothCentralUITests;

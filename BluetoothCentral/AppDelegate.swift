@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import HealthKit
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    func applicationShouldRequestHealthAuthorization(_ application: UIApplication) {
+        print("just before the request")
+        HKHealthStore().handleAuthorizationForExtension { (success, error) -> Void in
+        
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
