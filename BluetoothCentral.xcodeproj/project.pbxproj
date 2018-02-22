@@ -22,6 +22,7 @@
 		A2102B0B203CA10200E5F97B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102B0A203CA10200E5F97B /* ExtensionDelegate.swift */; };
 		A2102B0D203CA10200E5F97B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102B0C203CA10200E5F97B /* NotificationController.swift */; };
 		A2102B0F203CA10200E5F97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2102B0E203CA10200E5F97B /* Assets.xcassets */; };
+		A2102B27203CA14100E5F97B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2102B26203CA14100E5F97B /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		A2102B0E203CA10200E5F97B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2102B10203CA10200E5F97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2102B11203CA10200E5F97B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A2102B26203CA14100E5F97B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2102B27203CA14100E5F97B /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +151,7 @@
 				A2102AF8203CA10200E5F97B /* BluetoothCentral WatchKit App */,
 				A2102B07203CA10200E5F97B /* BluetoothCentral WatchKit Extension */,
 				A2102ACD203CA10100E5F97B /* Products */,
+				A2102B25203CA14000E5F97B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +219,14 @@
 				A2102B11203CA10200E5F97B /* PushNotificationPayload.apns */,
 			);
 			path = "BluetoothCentral WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		A2102B25203CA14000E5F97B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2102B26203CA14100E5F97B /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
