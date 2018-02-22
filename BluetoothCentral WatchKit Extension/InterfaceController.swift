@@ -15,22 +15,25 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var statusLabel: WKInterfaceLabel!
     
     let TextOrMapServiceUUID = CBUUID(string: "0000fff0-0000-1000-8000-00805f9b34fb")
-    let textCharacteristicUUID = CBUUID(string: "0000fff2-0000-1000-8000-00805f9b34fb")
-    let mapCharacteristicUUID = CBUUID(string: "0000fff1-0000-1000-8000-00805f9b34fb")
+    let textCharacteristicUUID = CBUUID(string: "0000fff1-0000-1000-8000-00805f9b34fb")
+    let heartCharacteristicUUID = CBUUID(string:
+        "0000fff2-0000-1000-8000-00805f9b34fb")
     let RSSI_range = -40..<(-15)  // optimal -22dB
     
     var centralManager: CBCentralManager!
     var discoveredPeripheral: CBPeripheral?
     var textCharacteristic: CBCharacteristic?
     var data = Data()
-    var mapCharacteristic: CBCharacteristic?
+    var heartCharacteristic: CBCharacteristic?
     
     @IBAction func button() {
+        guard let characteristic = heartCharacteristic else { return }
+        discoveredPeripheral?.writeValue(Data(bytes: [52]), for: characteristic, type: .withoutResponse)
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        centralManager = CBCentralManager(delegate: self, queue: nil)
         // Configure interface objects here.
     }
     
@@ -47,7 +50,7 @@ class InterfaceController: WKInterfaceController {
     // MARK: - Helper methods
     
     func scan() {
-        //statusLabel.setText("scanning")
+        statusLabel.setText("scanning")
         centralManager.scanForPeripherals(withServices: [TextOrMapServiceUUID], options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(value: true as Bool)])
     }
     
@@ -86,7 +89,7 @@ extension InterfaceController: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         guard RSSI_range.contains(RSSI.intValue) && discoveredPeripheral != peripheral else { return }
-        //statusLabel.setText("discovered peripheral")
+        statusLabel.setText("discovered peripheral")
         discoveredPeripheral = peripheral
         central.connect(peripheral, options: [:])
     }
@@ -97,7 +100,7 @@ extension InterfaceController: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        //statusLabel.setText("connected to peripheral")
+        statusLabel.setText("connected to peripheral")
         central.stopScan()
         data.removeAll()
         peripheral.delegate = self
@@ -125,8 +128,8 @@ extension InterfaceController: CBPeripheralDelegate {
         
         guard let services = peripheral.services else { return }
         for service in services {
-            //statusLabel.setText("discovered service")
-            peripheral.discoverCharacteristics([textCharacteristicUUID, mapCharacteristicUUID], for: service)
+            statusLabel.setText("discovered service")
+            peripheral.discoverCharacteristics([textCharacteristicUUID, heartCharacteristicUUID], for: service)
         }
     }
     
@@ -140,11 +143,11 @@ extension InterfaceController: CBPeripheralDelegate {
         guard let characteristics = service.characteristics else { return }
         for characteristic in characteristics {
             if characteristic.uuid == textCharacteristicUUID {
-                //statusLabel.setText("discovered textCharacteristic")
+                statusLabel.setText("discovered textCharacteristic")
                 textCharacteristic = characteristic
-            } else if characteristic.uuid == mapCharacteristicUUID {
-                //statusLabel.setText("discovered mapCharacteristic")
-                mapCharacteristic = characteristic
+            } else if characteristic.uuid == heartCharacteristicUUID {
+                statusLabel.setText("discovered mapCharacteristic")
+                heartCharacteristic = characteristic
             }
         }
     }
@@ -158,10 +161,10 @@ extension InterfaceController: CBPeripheralDelegate {
         if characteristic == textCharacteristic {
             guard let newData = characteristic.value else { return }
             let stringFromData = String(data: newData, encoding: .utf8)
-            //statusLabel.setText("received \(stringFromData ?? "nothing")")
+            statusLabel.setText("received \(stringFromData ?? "nothing")")
             
             if stringFromData == "EOM" {
-                //statusLabel.setHidden(true)
+                statusLabel.setHidden(true)
                 //textLabel.setText(String(data: data, encoding: .utf8))
                 data.removeAll()
             } else {
