@@ -44,13 +44,21 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func button() {
         guard let characteristic = heartCharacteristic else { return }
-        let random = UInt8(arc4random_uniform(7) + 60);
+        let random = UInt8(arc4random_uniform(7) + 60)
         discoveredPeripheral?.writeValue(Data(bytes: [random]), for: characteristic, type: .withoutResponse)
     }
     
-    override func awake(withCont ext context: Any?) {
+    @objc func send() {
+        guard let characteristic = heartCharacteristic else { return }
+        let random = UInt8(arc4random_uniform(7) + 60)
+        heartLabel.setText(String(random))
+        discoveredPeripheral?.writeValue(Data(bytes: [random]), for: characteristic, type: .withoutResponse)
+    }
+    
+    override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.send), userInfo: nil, repeats: true)
         // Configure interface objects here.
     }
     

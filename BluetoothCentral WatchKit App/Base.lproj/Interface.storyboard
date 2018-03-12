@@ -14,14 +14,14 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BluetoothCentral_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="97" height="32" alignment="center" title="Button" id="plV-c1-m8i">
+                        <button width="97" height="32" alignment="center" hidden="YES" title="Button" enabled="NO" id="plV-c1-m8i">
                             <connections>
                                 <action selector="button" destination="AgC-eL-Hgc" id="LJI-0j-tPp"/>
                             </connections>
                         </button>
-                        <label width="73" height="26" alignment="left" text="Label" id="4Ke-Sk-cqb"/>
+                        <label width="110" height="28" alignment="center" text="Label" textAlignment="center" id="4Ke-Sk-cqb"/>
                         <label width="111" height="28" alignment="center" text="Label" textAlignment="left" id="uIG-yI-vHa"/>
-                        <button width="1" alignment="left" title="Button" id="jMg-Xu-KSP">
+                        <button width="1" alignment="left" hidden="YES" title="Button" enabled="NO" id="jMg-Xu-KSP">
                             <connections>
                                 <action selector="startStopBtnClicked" destination="AgC-eL-Hgc" id="6s2-pj-YZk"/>
                             </connections>
